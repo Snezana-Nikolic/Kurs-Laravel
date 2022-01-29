@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ActorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/about', function () {
     return view('about.index');
 });
-Route::get('/home', function() {
+Route::get('/', function() {
     return view('home.index');
 });
 
@@ -28,3 +29,4 @@ Route::get('/home', function() {
 // ->name('movies.create');
 
 Route::resource('movies', MovieController::class);
+Route::resource('actors', ActorsController::class);
